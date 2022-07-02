@@ -4,7 +4,6 @@ const express = require("express"),
   dbConfig = require("./app/config/db.config");
 
 const app = express();
-
 var corsOptions = {
   origin: "http://localhost:8081",
 };
@@ -14,6 +13,11 @@ app.use(cors(corsOptions));
 app.use(express.json());
 // parse requests of content-type - application/x-www-form-urlencoded
 app.use(express.urlencoded({ extended: true }));
+
+// Swagger - API Documentation
+const swaggerUi = require("swagger-ui-express");
+const swaggerFile = require("./swagger_output.json");
+app.use("/doc", swaggerUi.serve, swaggerUi.setup(swaggerFile));
 
 const db = require("./app/models");
 const Role = db.role;
