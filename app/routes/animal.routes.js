@@ -19,7 +19,7 @@ module.exports = function (app) {
   );
 
   // Get an Animal based on ID
-  app.get("/api/animals", [authJwt.verifyToken], controller.getAnimalFromID);
+  app.get("/api/animals/:id", [authJwt.verifyToken], controller.getAnimalByID);
 
   // Post an animal
   app.post(

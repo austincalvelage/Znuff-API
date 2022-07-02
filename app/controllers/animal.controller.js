@@ -99,9 +99,9 @@ exports.getAllAnimals = (req, res) => {
 };
 
 // Get Animal by id
-exports.getAnimalFromID = (req, res) => {
+exports.getAnimalByID = (req, res) => {
   Animal.findOne({
-    _id: { $in: req.body.id },
+    _id: { $in: req.params.id },
   })
     .then((data) => {
       return res
