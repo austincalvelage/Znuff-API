@@ -14,17 +14,21 @@ module.exports = function (app) {
   // Get All Animals
   app.get(
     "/api/animals/all",
-    [authJwt.verifyToken, authJwt.isModerator],
+    // [authJwt.verifyToken, authJwt.isModerator],
     controller.getAllAnimals
   );
 
   // Get an Animal based on ID
-  app.get("/api/animals/:id", [authJwt.verifyToken], controller.getAnimalByID);
+  app.get(
+    "/api/animals/:id",
+    // [authJwt.verifyToken],
+    controller.getAnimalByID
+  );
 
   // Post an animal
   app.post(
     "/api/animal/postAnimals",
-    [authJwt.verifyToken],
+    // [authJwt.verifyToken],
     animalController.postAnimals
   );
 };
