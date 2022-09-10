@@ -9,9 +9,9 @@ At the end of the day, they're suffering on the streets, and all of us are respo
 
 The Znuffy Platform will have 3 different sections on the Animal section:
 
-1- Adopt a Stray/Home Dog or Cat (possibly in the future also other Pets).
-2- Lost a Pet
-3- Found a Pet
+1- Adopt a Stray/Home Dog or Cat (possibly in the future also other Pets).<br/>
+2- Lost a Pet<br/>
+3- Found a Pet<br/>
 
 In order to make the project successful (on such bold mission), funding will be necessary (specially, bc a lot of our operations, will require a Team of Veterinarians, Rescuers and Maintainers), so, in order to aim to GUARANTEE that this project never dies in the attempt to make the life of those pets as better as possible, we have created an eCommerce focused on providing 3 difference price ranges products TO ALL COSTUMERS, so, we can make the maintainment and living with animals more easy, resulting on the possibility of more houses open for adoption, and help guarantee that every household has the possibility to provide food to their hairy friend.
 
