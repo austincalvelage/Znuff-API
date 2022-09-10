@@ -24,7 +24,7 @@ exports.postAnimals = (req, res) => {
     genre: req.body.genre,
     breed: req.body.breed,
     characteristics: {
-      easyToGrood: req.body.characteristics.groom,
+      easyToGroom: req.body.characteristics.groom,
       dogFriendly: req.body.characteristics.dogFriendly,
       catFriendly: req.body.characteristics.catFriendly,
       houseTrained: req.body.characteristics.houseTrained,
@@ -48,10 +48,11 @@ exports.postAnimals = (req, res) => {
       id: req.body.poster.id,
       number: req.body.poster.number,
       contactChannels: [req.body.poster.number],
+      posterType: req.body.poster.type,
     },
   });
 
-  User.findOne({ _id: req.body.poster.id }, (err, user) => {
+  User.findOne({ id: req.body.poster.id }, (err, user) => {
     if (err) {
       res.status(500).send({ message: err });
       return;
@@ -104,9 +105,7 @@ exports.getAnimalByID = (req, res) => {
     _id: { $in: req.params.id },
   })
     .then((data) => {
-      return res
-        .status(200)
-        .send({ message: `ID found for ${data.name}: ${data.id}` });
+      return res.status(200).send(data);
     })
     .catch(() => {
       return res

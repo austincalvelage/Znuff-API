@@ -15,7 +15,7 @@ const Animal = mongoose.model(
     genre: String,
     breed: String,
     characteristics: {
-      easyToGrood: Boolean,
+      easyToGroom: Boolean,
       dogFriendly: Boolean,
       catFriendly: Boolean,
       houseTrained: Boolean,
@@ -46,6 +46,7 @@ const Animal = mongoose.model(
       number: Number,
       email: String,
       contactChannels: [String],
+      posterType: String,
     },
   })
 );

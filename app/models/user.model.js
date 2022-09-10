@@ -6,12 +6,7 @@ const User = mongoose.model(
     email: String,
     password: String,
     userSince: Date,
-    posts: [
-      {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "Animal",
-      },
-    ],
+    posts: [],
     roles: [
       {
         type: mongoose.Schema.Types.ObjectId,
