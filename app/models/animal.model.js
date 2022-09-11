@@ -5,11 +5,12 @@ const Animal = mongoose.model(
     type: String,
     posted: Date,
     name: String,
-    location: String,
+    // location: String,
     // images: {
     //   data: Buffer,
     //   contentType: String,
     // },
+    image: String,
     location: String,
     age: Number,
     genre: String,

@@ -20,6 +20,7 @@ exports.postAnimals = (req, res) => {
     //   contentType: String,
     // },
     location: req.body.location,
+    image: req.body.image,
     age: req.body.age,
     genre: req.body.genre,
     breed: req.body.breed,
